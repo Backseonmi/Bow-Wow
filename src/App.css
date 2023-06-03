@@ -1,0 +1,13 @@
+body {
+  background-color: #FFFAF5;
+}
+.Bar {
+  display: flex;
+  list-style-type: none;
+  margin-left: 1200px;
+}
+.navbar {
+  margin: 20px;
+  text-decoration: none;
+  color: lightslategray;
+}
