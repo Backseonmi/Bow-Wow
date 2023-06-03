@@ -1,0 +1,130 @@
+import React, { useState } from 'react'
+import { useDispatch } from 'react-redux'
+import {registerUser} from '../../../_actions/user_action';
+import {withRouter} from 'react-router-dom';
+import axios from 'axios';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
+import {faPaw } from "@fortawesome/free-solid-svg-icons";
+import '../../../App.css'
+import Abandoned from '../../../abandoned/Abandoned';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import LoginPage from '../../../components/views/LoginPage/LoginPage';
+import LandingPage from '../../../components/views/LandingPage/LandingPage.js';
+import Auth from '../../../hoc/auth';
+import Home from '../../../home/Home';
+
+
+
+function RegisterPage(props) {
+  const [isopenMenu, setIsOpenMenu] = useState(false)
+
+    const toggleBtn = () => {
+      setIsOpenMenu(!isopenMenu);
+    }
+
+  const dispatch = useDispatch();
+
+  const [Email, setEmail] = useState("")
+  const [Password, setPassword] = useState("")
+  const [Name, setName] = useState("")
+  const [ConfirmPassword, setConfirmPassword] = useState("")
+
+  const onEmailHandler = (event) => {
+    setEmail(event.currentTarget.value)
+  }
+
+  const onPasswordHandler = (event) => {
+    setPassword(event.currentTarget.value)
+  }
+
+  const onNameHandler = (event) => {
+    setName(event.currentTarget.value)
+  }
+
+  const onConfirmPasswordHandler = (event) => {
+    setConfirmPassword(event.currentTarget.value)
+  }
+
+
+  const onSubmitHandler = (event) => {
+    event.preventDefault();
+
+    if(Password !== ConfirmPassword) {
+      return alert('비밀번호와 비밀번호 확인은 같아야 합니다')
+    }
+
+    let body = {
+      email : Email,
+      password : Password,
+      name : Name
+    }
+
+    dispatch(registerUser(body))
+      .then(response => {
+        if(response.payload.success) {
+          props.history.push('/login')
+        }else{
+          alert("Failed to sign up")
+        }
+      })
+
+  }
+  const onClickHandler = () => {
+      props.history.push("/login")
+  }
+
+  
+  return (
+    <div>
+            <nav className="navbar">
+                <div className="navbar_logo">
+                    <a href=''>멍주인</a>
+                </div>
+                
+                <ul className={`navbar_menu ${isopenMenu ? 'active' : ''}`}>
+                    <li><Link to="/home">홈</Link></li>
+                    <li><Link to="/abandoned">키워줘멍</Link></li> 
+                    <li><Link to='/bow'>멍멍</Link></li> 
+                    <li><Link to='/play'>놀자멍</Link></li>
+                    <li><Link to='/login'>로그인</Link></li>
+                </ul>
+
+                <a href='#' className='navbar_toogleBtn' onClick={toggleBtn}>
+                    <FontAwesomeIcon icon={faPaw} />
+                </a>
+            </nav>
+            <hr/>
+    <div style={{
+      displonSubmitHandleray : 'flex', justifyContent : 'center', alignItems : 'center'
+      ,width : '100%', height : '100vh'
+    }}>
+      <form style={{display : 'flex', flexDirection : 'column'}}
+        onSubmit={onSubmitHandler}
+      >
+        <label>Email</label>
+        <input type="email" value={Email} onChange={onEmailHandler}/>
+
+        <label>Name</label>
+        <input type="text" value={Name} onChange={onNameHandler}/>
+
+        <label>Password</label>
+        <input type="Password" value={Password} onChange={onPasswordHandler}/>
+        
+        <label>Confirm Password</label>
+        <input type="password" value={ConfirmPassword} onChange={onConfirmPasswordHandler}/>
+
+          <br />
+          <button type="submit">
+            회원 가입
+          </button>
+          <button type="submit" onClick={onClickHandler}>
+            로그인
+          </button>
+      </form>
+    </div>
+    </div>
+  )
+}
+
+export default withRouter(RegisterPage)
