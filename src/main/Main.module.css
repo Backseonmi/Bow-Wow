@@ -1,0 +1,44 @@
+.App-logo{
+  width: 100%;
+  height: 400px;  /*나중에 반응형으로 크기 고정*/
+  object-fit: cover;
+}
+
+.centered {
+  margin-top: 100px;
+  text-align: center;
+  
+}
+
+.title{
+  margin-top: 180px;
+  margin-left: 50px;
+  font-size: 2.4rem;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.title p {
+  /* 기본 텍스트 스타일 설정 */
+  opacity: 0; /* 텍스트 초기 상태는 투명으로 설정 */
+  transition: all 0.3s ease; /* 애니메이션 효과 설정 */
+}
+
+.title p.showText {
+  /* 텍스트 표시 스타일 설정 */
+  opacity: 1;
+}
+.showText {
+  animation: fadeIn 3s; /* 애니메이션 지속 시간 설정*/
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
