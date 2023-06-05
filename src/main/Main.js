@@ -9,7 +9,10 @@ import 'swiper/swiper.min.css';
 import logo1 from '../assets/banner1.png';
 import logo2 from '../assets/banner2.png';
 import logo3 from '../assets/banner3.png';
+import logo4 from '../assets/키워줘멍.png';
+import logo5 from '../assets/멍멍.png';
 import styles from './Main.module.css';
+
 
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 
@@ -39,7 +42,6 @@ function Main() {
     <>
       <div>
         <Swiper
-          className={styles.banner}
           spaceBetween={50}
           slidesPerView={1}
           pagination={{ clickable: true }}
@@ -61,25 +63,41 @@ function Main() {
 
       <div className={styles.title}>
         <p className={showText ? styles.showText : ''}>
-          Learn more<br/>
-          about your dog
+          Be My Family
         </p>
       </div>
 
+      
+      <div className={styles.container}>
+        <img src={logo4} className={styles.first} />
+        <div className={styles.float}>
+          <p className={styles.caption1}>새로운 가족을 맞아주세요!</p>
+          <p className={styles.caption2}>키워줘 멍</p>
+          <p className={styles.caption3}>새로운 가족을 기다리고 있는 귀여운<br/>아이들에게 기적을 선물해 주세요</p>
+        </div>
+      </div>
+
       <div className={styles.title}>
-        <p>
-          dfdfsdfdfdddddd<br/>
-          dfdfsdfdfdddddd<br/>
-          dfdfsdfdfdddddd<br/>
-          dfdfsdfdfdddddd<br/>
-          dfdfsdfdfdddddd<br/>
-          dfdfsdfdfdddddd<br/>
-          dfdfsdfdfdddddd<br/>
-          dfdfsdfdfdddddd<br/>
-          dfdfsdfdfdddddd<br/>
-          dfdfsdfdfdddddd<br/>
-          dfdfsdfdfdddddd<br/>
+        <p className={showText ? styles.showText : ''}>
+        Share With Me
         </p>
+      </div>
+
+      <div className={styles.container}>
+        <img src={logo5} className={styles.second} />
+        <div className={styles.float}>
+          <p className={styles.caption4}>대화를 나눠봐요!</p>
+          <p className={styles.caption5}>멍멍</p>
+          <p className={styles.caption6}>내 애완견를 자랑하고<br/>서로의 꿀팁들을 나눠보세요</p>
+        </div>
+      </div>
+
+      <div className={styles.bottom}>
+        <div className = {styles.info}>
+          <p>백선미 w2102@e-mirim.hs.kr / 010-8082-7009</p>
+          <p>김비야 w2116@e-mirim.hs.kr / 010-0000-000</p>
+        </div>
+        
       </div>
     </>
   );

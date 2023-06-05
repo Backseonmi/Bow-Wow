@@ -7,7 +7,21 @@
 .centered {
   margin-top: 100px;
   text-align: center;
+  color: #575757;
+  position: relative;
+  overflow: hidden;
+  animation: fadein 1s ease-in-out;
   
+}
+@keyframes fadein{
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 .title{
@@ -29,7 +43,7 @@
   opacity: 1;
 }
 .showText {
-  animation: fadeIn 3s; /* 애니메이션 지속 시간 설정*/
+  animation: fadeIn 1s; /* 애니메이션 지속 시간 설정*/
 }
 
 @keyframes fadeIn {
@@ -42,3 +56,106 @@
     transform: translateY(0%);
   }
 }
+
+.container {
+  position: relative;
+  display: inline-block;
+}
+
+.first{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.caption1{
+  font-size: 2.3rem;
+  font-weight: bold;
+  font-style: normal;
+  position: absolute;
+  top: 120px;
+  left: 70px;
+  color: #fff;
+  padding: 10px;
+}
+.caption2{
+  font-size: 2.6rem;
+  font-weight: bold;
+  font-style: normal;
+  position: absolute;
+  top: 166px;
+  left: 70px;
+  color: #fff;
+  padding: 10px;
+}
+.caption3{
+  font-size: 1.3rem;
+  font-weight: lighter;
+  font-style: normal;
+  position: absolute;
+  top: 260px;
+  left: 70px;
+  color: #fff;
+  padding: 10px;
+  line-height : 25px;
+}
+
+.second{
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 90px;
+}
+
+.caption4{
+  font-size: 2.3rem;
+  font-weight: bold;
+  font-style: normal;
+  position: absolute;
+  top: 120px;
+  right: 100px;
+  color: #fff;
+  padding: 10px;
+}
+
+.caption5{
+  font-size: 2.6rem;
+  font-weight: bold;
+  font-style: normal;
+  position: absolute;
+  top: 166px;
+  right: 297px;
+  color: #fff;
+  padding: 10px;
+}
+
+.caption6{
+  font-size: 1.3rem;
+  font-weight: lighter;
+  font-style: normal;
+  position: absolute;
+  top: 260px;
+  right: 115px;
+  color: #fff;
+  padding: 10px;
+  line-height : 25px;
+}
+
+.bottom {
+  background-color: #363636;
+  width: 100%;
+  height: 300px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info{
+  font-size: 1.1rem;
+  font-weight:200;
+  font-style: normal;
+  color: white;
+  text-align: center;
+}
+
