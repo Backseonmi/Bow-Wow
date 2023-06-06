@@ -16,6 +16,7 @@ function App() {
           <Link className='navbar' to="/abandoned">키워줘멍</Link>
           <Link className='navbar' to='/bow'>멍멍</Link>
           <Link className='navbar' to='/login'>나의멍</Link>
+          <Link className='navbar' to='/login'>로그인</Link>
         </div>
      
 
