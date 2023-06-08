@@ -18,10 +18,13 @@
     margin-left: 325px;
     margin-top: 50px;
 }
-.title { 
-    
-   
+.nextButton{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.content {
-    
+.active {
+  background-color: purple;
+  color: white;
 }

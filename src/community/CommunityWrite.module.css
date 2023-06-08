@@ -1,0 +1,15 @@
+.qleditor {
+    width: 100%;
+    height: 400px;
+}
+
+.post {
+    border : none;
+    background-color: #080665;
+    width: 125px;
+    height: 35px;
+    color: white;
+    margin-left: 1300px;
+    margin-top: 60px;
+    font-size: 14px;
+}

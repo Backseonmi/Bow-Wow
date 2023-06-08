@@ -95,7 +95,7 @@ function Main() {
       <div className={styles.bottom}>
         <div className = {styles.info}>
           <p>백선미 w2102@e-mirim.hs.kr / 010-8082-7009</p>
-          <p>김비야 w2116@e-mirim.hs.kr / 010-0000-000</p>
+          <p>김비야 w2116@e-mirim.hs.kr / 010-8696-8430</p>
         </div>
         
       </div>

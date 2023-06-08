@@ -7,6 +7,9 @@ import Login from './login/Login';
 import Signup from './sign-up/sign-up';
 import Community from './community/Community';
 
+import CommunityList from './community/CommunityList';
+import CommunityWrite from './community/CommunityWrite';
+
 function App() {
   return (
     <div>
@@ -22,7 +25,8 @@ function App() {
         <Route exact path="/" render={() => <Main />} />
         <Route exact path="/home" render={() => <Main />} />
         <Route exact path="/abandoned" render={() => <Abandoned />} />
-        <Route exact path="/bow" render={() => <Community />} />
+        <Route exact path="/bow" render={() => <CommunityList />} />
+        <Route exact path="/community/write" component={CommunityWrite} />
         <Route exact path="/login" render={() => <Login />} />
         <Route exact path="/sign" render={() => <Signup />} />
 
