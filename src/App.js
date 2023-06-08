@@ -4,9 +4,6 @@ import './App.css';
 import Main from './main/Main';
 import Abandoned from './abandoned/Abandoned'
 import Login from './login/Login';
-import Signup from './sign-up/sign-up';
-import Community from './community/Community';
-
 import CommunityList from './community/CommunityList';
 import CommunityWrite from './community/CommunityWrite';
 
@@ -28,7 +25,6 @@ function App() {
         <Route exact path="/bow" render={() => <CommunityList />} />
         <Route exact path="/community/write" component={CommunityWrite} />
         <Route exact path="/login" render={() => <Login />} />
-        <Route exact path="/sign" render={() => <Signup />} />
 
     </div>
   );
