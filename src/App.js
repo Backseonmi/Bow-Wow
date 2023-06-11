@@ -6,6 +6,7 @@ import Abandoned from './abandoned/Abandoned'
 import Login from './login/Login';
 import CommunityList from './community/CommunityList';
 import CommunityWrite from './community/CommunityWrite';
+import CommunityDetail from './community/CommunityDetail';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route exact path="/abandoned" render={() => <Abandoned />} />
         <Route exact path="/bow" render={() => <CommunityList />} />
         <Route exact path="/community/write" component={CommunityWrite} />
+        <Route path="/community/detail/:postId" component={CommunityDetail} />
         <Route exact path="/login" render={() => <Login />} />
 
     </div>

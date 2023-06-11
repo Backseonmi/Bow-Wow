@@ -1,0 +1,47 @@
+.titleContainer {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+.title {
+    margin: 0 auto; /* 가로적으로 중앙으로 정렬 */
+    text-align: center; /* 내용 가로 중앙 정렬 */
+}
+
+.date-author {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.date-author p{
+    margin-right: 20px; /* 간격을 조정하고자 하는 값으로 설정 */
+}
+
+hr {
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+  width: 1000px;
+}
+
+.content{
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: auto; 
+    margin-right: auto;
+    border-style: solid;
+    border-width: 1px;
+    width: 1200px;
+    height: 700px;
+    border-color: #000;
+    border-radius: 6px; /* 테두리 둥글기를 설정합니다 */
+}
+  
+  

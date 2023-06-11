@@ -2,7 +2,7 @@
     font-weight :bold;
     color: #080665;
 }
-.post {
+.newPost {
     border : none;
     background-color: #080665;
     width: 125px;
@@ -10,21 +10,51 @@
     color: white;
     margin-left: 1100px;
     margin-top: 50px;
+    margin-bottom: 20px;
     font-size: 14px;
+    border-radius: 6px;
 }
-.Community {
-    width: 900px;
-    height: 120px;
-    margin-left: 325px;
-    margin-top: 50px;
+
+table {
+    width: 1000px;
+    margin-left: auto; 
+    margin-right: auto;
+    border-top: 2px solid #444444;
+    border-collapse: collapse;
+    text-align: center;
 }
+th, td {
+    border-bottom: 1px solid #444444;
+    padding: 10px;
+}
+tbody tr:hover {
+    background-color: rgb(219, 219, 219);
+    transition: background-color 0.7s;
+}
+
 .nextButton{
+    border : none;
     margin-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .active {
-  background-color: purple;
-  color: white;
+    border : none;
+    background-color: #7271c6;
+    color: white;
+}
+
+.content{
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: auto; 
+    margin-right: auto;
+    border-style: solid;
+    border-width: 1px;
+    width: 1200px;
+    height: 700px;
+    border-color: #000;
+    border-radius: 6px; /* 테두리 둥글기를 설정합니다 */
 }
