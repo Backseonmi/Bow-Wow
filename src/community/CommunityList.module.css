@@ -43,18 +43,31 @@ tbody tr:hover {
 }
 
 .nextButton {
-    border: none;
-    margin-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.active {
-    border: none;
+  }
+  
+  .nextButton button {
+    background-color: white;
+    color: #444444;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #9d9d9d;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .nextButton button.active {
     background-color: #7271c6;
     color: white;
-}
+    border-style: solid;
+    border-width: 1px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 
 @media (max-width: 1920px) {
     .newPost {

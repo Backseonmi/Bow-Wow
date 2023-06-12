@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { doc, getDoc, deleteDoc, db, useCurrentUser } from '../firebase';
+import { ref, getDownloadURL } from 'firebase/storage';
 import styles from './CommunityDetail.module.css';
 import { useHistory } from 'react-router-dom';
+import { storage } from '../firebase'; // storage 추가
 
 const CommunityDetail = (props) => {
   const [post, setPost] = useState(null);
@@ -23,13 +25,32 @@ const CommunityDetail = (props) => {
       }
     };
 
-    fetchPost();
+    if (postId) {
+      fetchPost();
+    }
   }, [postId]);
 
+  // 이미지 다운로드 URL 가져오기
+  useEffect(() => {
+    const fetchImage = async () => {
+      try {
+        if (post && post.imagePath) {
+          const storageRef = ref(storage, post.imagePath);
+          const imageUrl = await getDownloadURL(storageRef);
+          setPost((prevPost) => ({ ...prevPost, imageUrl: imageUrl }));
+        }
+      } catch (error) {
+        console.log('이미지를 가져오는 중 오류가 발생했습니다.', error);
+      }
+    };
+
+    fetchImage();
+  }, [post]);
+
   const stripTags = (html) => {
-    const tmp = document.createElement("DIV");
+    const tmp = document.createElement('div');
     tmp.innerHTML = html;
-    return tmp.textContent || tmp.innerText || "";
+    return tmp.textContent || tmp.innerText || '';
   };
 
   const handleDelete = async () => {
@@ -57,10 +78,15 @@ const CommunityDetail = (props) => {
         <p className={styles.author}>{post.author}</p>
       </div>
 
-      <div className={styles.content}>{stripTags(post.content)}</div>
+      <div className={styles.content}>
+        <img src={post.url} />
+        {stripTags(post.content)}
+      </div>
 
       {post.author === currentUser.displayName && (
-        <button className={styles.deleteButton} onClick={() => handleDelete(post.id)}>게시물 삭제</button>
+        <button className={styles.deleteButton} onClick={() => handleDelete(post.id)}>
+          게시물 삭제
+        </button>
       )}
     </>
   );

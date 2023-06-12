@@ -2,6 +2,7 @@ import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, addDoc, onSnapshot, deleteDoc, doc, getDoc} from 'firebase/firestore';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import React, { useState, useEffect } from 'react';
+import { getStorage } from 'firebase/storage';
 
 const firebaseConfig = {
   // Firebase 설정 정보 입력
@@ -16,6 +17,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const auth = getAuth(app);
+const storage = getStorage(app);
 
 const useCurrentUser = () => {
   const [currentUser, setCurrentUser] = useState(null);
@@ -39,4 +41,5 @@ const useAuth = () => {
   return auth;
 };
 
-export { db, collection, addDoc, onSnapshot, deleteDoc, doc, getDoc, useCurrentUser, useAuth };
+export { db, collection, addDoc, onSnapshot, deleteDoc, doc, getDoc, useCurrentUser, useAuth, storage};
+

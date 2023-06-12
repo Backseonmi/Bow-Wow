@@ -15,25 +15,24 @@ const CommunityList = () => {
     // Firebase Firestore에서 게시물 목록을 실시간으로 감지
     onSnapshot(collection(db, 'posts'), (snapshot) => {
       const postsData = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
-      const sortedPosts = postsData.sort((a, b) => a.date.localeCompare(b.date) || a.id.localeCompare(b.id));
+      const sortedPosts = postsData.sort((a, b) => {
+        // 날짜를 기준으로 내림차순으로 정렬
+        const dateComparison = b.date.localeCompare(a.date);
+        if (dateComparison !== 0) {
+          return dateComparison;
+        }
+        // 같은 날짜인 경우 가장 최신에 쓴 게시물이 맨 위로 올라오도록 정렬
+        return b.id.localeCompare(a.id);
+      });
       setPosts(sortedPosts);
     });
-  }, []);
+  }, []);  
 
   const history = useHistory();
 
   const handleRowClick = (postId) => {
     history.push(`/community/detail/${postId}`);
   };
-
-  // const handleDelete = async (postId) => {
-  //   try {
-  //     await deleteDoc(doc(collection(db, 'posts'), postId));
-  //     console.log('게시물이 성공적으로 삭제되었습니다.');
-  //   } catch (error) {
-  //     console.log('게시물 삭제 중 오류가 발생했습니다.', error);
-  //   }
-  // };
 
   const totalPages = Math.ceil(posts.length / pageSize);
   const startIndex = (currentPage - 1) * pageSize;
@@ -65,7 +64,7 @@ const CommunityList = () => {
         <tbody>
           {currentPosts.map((post, index) => (
             <tr key={post.id} onClick={() => handleRowClick(post.id)}>
-              <td>{index + 1}</td>
+              <td>{startIndex + index + 1}</td> {/* 번호 수정 */}
               <td className={styles.title}>{post.title}</td>
               <td>{post.author}</td>
               <td>{post.date}</td>

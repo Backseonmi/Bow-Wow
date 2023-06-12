@@ -23,12 +23,15 @@
     border: 1px solid #444444;
 }
 
-.qleditor {
+.contentInput{
+    display: block;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1000px;
     height: 400px;
     margin-left: auto;
     margin-right: auto;
+    border: 1px solid #444444;
+    border-radius: 3px;
 }
 
 .comButton {
@@ -37,12 +40,35 @@
     width: 125px;
     height: 35px;
     color: white;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 120px;
     margin-top: 100px;
     margin-bottom: 50px;
     font-size: 14px;
     border-radius: 6px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* 사이를 넓히는 값 설정 */
+  }
+  
+
+input[type="file"]::file-selector-button {
+    background-color: #8e8dcd;
+    width: 125px;
+    height: 35px;
+    color: white;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+input[type="file"] {
+    width: 440px;
 }
 
 @media (max-width: 1920px) {
