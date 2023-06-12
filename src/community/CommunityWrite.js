@@ -65,26 +65,29 @@ const CommunityWrite = () => {
 
   return (
     <>
-      <div>
-        <h2>글 작성</h2>
-        <input
-          type="text"
-          value={title}
-          onChange={handleTitleChange}
-          placeholder="제목을 입력하세요."
-          className={styles.titleInput}
-        />
-        <ReactQuill
-          value={content}
-          modules={modules}
-          placeholder="내용을 입력해주세요."
-          onChange={handleContentChange}
-          className={styles.qleditor}
-        />
-        <button onClick={handleSubmit} className={styles.post}>
-          작성 완료
-        </button>
-      </div>
+    <div className={styles.titleContainer}>
+        <h2 className={styles.title}>글 작성</h2>
+    </div>
+
+    <div>
+      <input
+        type="text"
+        value={title}
+        onChange={handleTitleChange}
+        placeholder="제목을 입력하세요."
+        className={styles.titleInput}/>
+    </div>
+
+    <div>
+      <ReactQuill
+        value={content}
+        modules={modules}
+        placeholder="내용을 입력해주세요."
+        onChange={handleContentChange}
+        className={styles.qleditor}/>
+    </div>
+      
+      <button onClick={handleSubmit} className={styles.comButton}>글쓰기</button>
     </>
   );
 };

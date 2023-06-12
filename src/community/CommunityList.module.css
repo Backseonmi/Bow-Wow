@@ -1,9 +1,17 @@
 .h2 {
-    font-weight :bold;
+    font-weight: bold;
     color: #080665;
+    margin-left: auto;
+    margin-right: auto;
 }
+
+.p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .newPost {
-    border : none;
+    border: none;
     background-color: #080665;
     width: 125px;
     height: 35px;
@@ -17,44 +25,101 @@
 
 table {
     width: 1000px;
-    margin-left: auto; 
+    margin-left: auto;
     margin-right: auto;
     border-top: 2px solid #444444;
     border-collapse: collapse;
     text-align: center;
 }
+
 th, td {
     border-bottom: 1px solid #444444;
     padding: 10px;
 }
+
 tbody tr:hover {
     background-color: rgb(219, 219, 219);
     transition: background-color 0.7s;
 }
 
-.nextButton{
-    border : none;
+.nextButton {
+    border: none;
     margin-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .active {
-    border : none;
+    border: none;
     background-color: #7271c6;
     color: white;
 }
 
-.content{
-    display: block;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    margin-left: auto; 
-    margin-right: auto;
-    border-style: solid;
-    border-width: 1px;
-    width: 1200px;
-    height: 700px;
-    border-color: #000;
-    border-radius: 6px; /* 테두리 둥글기를 설정합니다 */
+@media (max-width: 1920px) {
+    .newPost {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    table {
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .nextButton {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .newPost {
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+
+    table {
+        width: 94%;
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+
+    .nextButton {
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 768px) {
+    .newPost {
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    table {
+        width: 96%;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    .nextButton {
+        margin-top: 2px;
+    }
+}
+
+@media (max-width: 480px) {
+    .newPost {
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+
+    table {
+        width: 98%;
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+
+    .nextButton {
+        margin-top: 1px;
+    }
 }

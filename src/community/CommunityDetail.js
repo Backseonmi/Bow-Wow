@@ -57,12 +57,10 @@ const CommunityDetail = (props) => {
         <p className={styles.author}>{post.author}</p>
       </div>
 
-      <hr />
-
       <div className={styles.content}>{stripTags(post.content)}</div>
 
       {post.author === currentUser.displayName && (
-        <button onClick={() => handleDelete(post.id)}>게시물 삭제</button>
+        <button className={styles.deleteButton} onClick={() => handleDelete(post.id)}>게시물 삭제</button>
       )}
     </>
   );
