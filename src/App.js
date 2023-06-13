@@ -7,6 +7,7 @@ import Login from './login/Login';
 import CommunityList from './community/CommunityList';
 import CommunityWrite from './community/CommunityWrite';
 import CommunityDetail from './community/CommunityDetail';
+import Shelter from './Shelter/Shelter';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Link className='navbar' to="/home">홈</Link>
           <Link className='navbar' to="/abandoned">키워줘멍</Link>
           <Link className='navbar' to='/bow'>멍멍</Link>
+          <Link className='navbar' to='/shelter'>보러와멍</Link>
           <Link className='navbar' to='/login'>나의멍</Link>
         </div>
      
@@ -23,6 +25,7 @@ function App() {
         <Route exact path="/" render={() => <Main />} />
         <Route exact path="/home" render={() => <Main />} />
         <Route exact path="/abandoned" render={() => <Abandoned />} />
+        <Route exact path="/shelter" render={() => <Shelter />} />
         <Route exact path="/bow" render={() => <CommunityList />} />
         <Route exact path="/community/write" component={CommunityWrite} />
         <Route path="/community/detail/:postId" component={CommunityDetail} />
