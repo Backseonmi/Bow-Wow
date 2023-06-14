@@ -12,6 +12,7 @@ import logo3 from '../assets/banner3.png';
 import logo4 from '../assets/키워줘멍.png';
 import logo5 from '../assets/멍멍.png';
 import styles from './Main.module.css';
+import wow from '../assets/wow.png';
 
 
 SwiperCore.use([Navigation, Pagination, Autoplay]);
@@ -84,7 +85,7 @@ function Main() {
       </div>
 
       <div className={styles.container}>
-        <img src={logo5} className={styles.second} />
+        <img src={wow} className={styles.second} />
         <div className={styles.float}>
           <p className={styles.caption4}>대화를 나눠봐요!</p>
           <p className={styles.caption5}>멍멍</p>
