@@ -1,0 +1,33 @@
+.Cont{
+    margin-top: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 1000px;
+    height: 200px;
+    display: inline-block;
+    box-sizing: border-box;
+    margin-left: 90px;
+    margin-right: 90px;
+    margin-top: 100px;
+    border-radius: 30px;
+    background-color: #ffdc7d;
+} 
+
+.container h2{
+    text-align : center;
+	line-height : 200px;
+    font-style: normal;
+}
+
+.Cont{
+    margin-top: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,18 +1,34 @@
+body{
+  background-color: #FEF7ED !important;
+}
+
+.swiperWrapper {
+  width: 100%;
+  margin-top: 50px;
+}
+
+.swiper {
+  width: 100%;
+  margin: 0;
+}
+
 .App-logo{
   width: 100%;
-  height: 400px;  /*나중에 반응형으로 크기 고정*/
-  object-fit: cover;
+  height: auto;
 }  
 
 .centered {
   margin-top: 100px;
+  margin-bottom: 120px;
   text-align: center;
   color: #575757;
   position: relative;
   overflow: hidden;
   animation: fadein 1s ease-in-out;
-  
+  font-size: 30px;
+  font-family: var(--font-NotoSansKRmeid);
 }
+
 @keyframes fadein{
   0% {
     opacity: 0;
@@ -27,39 +43,20 @@
 .title{
   margin-top: 180px;
   margin-left: 50px;
-  font-size: 2.4rem;
+  font-size: 4rem;
   font-weight: bold;
   font-style: normal;
-}
-
-.title p {
-  /* 기본 텍스트 스타일 설정 */
-  opacity: 0; /* 텍스트 초기 상태는 투명으로 설정 */
-  transition: all 0.3s ease; /* 애니메이션 효과 설정 */
-}
-
-.title p.showText {
-  /* 텍스트 표시 스타일 설정 */
-  opacity: 1;
-}
-.showText {
-  animation: fadeIn 1s; /* 애니메이션 지속 시간 설정*/
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(100%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0%);
-  }
 }
 
 .container {
   position: relative;
   display: inline-block;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.float{
+  text-shadow: 2px 2px 6px rgb(71, 71, 71);
 }
 
 .first{
@@ -69,93 +66,141 @@
 }
 
 .caption1{
-  font-size: 2.3rem;
-  font-weight: bold;
-  font-style: normal;
+  font-size: 4.3rem;
+  font-family: var(--font-NotoSansKRbold);
   position: absolute;
-  top: 120px;
-  left: 70px;
+  top: 400px;
+  right: 100px;
   color: #fff;
-  padding: 10px;
 }
 .caption2{
-  font-size: 2.6rem;
-  font-weight: bold;
-  font-style: normal;
+  font-size: 4.3rem;
+  font-family: var(--font-NotoSansKRbold);
   position: absolute;
-  top: 166px;
-  left: 70px;
+  top: 490px;
+  right: 585px;
   color: #fff;
-  padding: 10px;
 }
 .caption3{
-  font-size: 1.3rem;
-  font-weight: lighter;
-  font-style: normal;
+  font-size: 2.6rem;
+  font-family: var(--font-NotoSansKRmeid);
   position: absolute;
-  top: 260px;
-  left: 70px;
+  top: 650px;
+  right: 240px;
   color: #fff;
-  padding: 10px;
-  line-height : 25px;
 }
 
 .second{
   display: block;
   width: 100%;
   height: auto;
-  margin-bottom: 90px;
 }
 
 .caption4{
-  font-size: 2.3rem;
-  font-weight: bold;
-  font-style: normal;
+  font-size: 4.3rem;
+  font-family: var(--font-NotoSansKRbold);
   position: absolute;
-  top: 120px;
+  top: 560px;
+  left: 200px;
+  color: #fff;
+}
+.caption5{
+  font-size: 4.3rem;
+  font-family: var(--font-NotoSansKRbold);
+  position: absolute;
+  top: 650px;
+  left: 200px;
+  color: #fff;
+}
+.caption6{
+  font-size: 2.6rem;
+  font-family: var(--font-NotoSansKRmeid);
+  position: absolute;
+  top: 810px;
+  left: 200px;
+  color: #fff;
+}
+
+.third{
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 90px;
+}
+
+.caption7{
+  font-size: 4.3rem;
+  font-family: var(--font-NotoSansKRbold);
+  position: absolute;
+  top: 400px;
   right: 100px;
   color: #fff;
-  padding: 10px;
 }
-
-.caption5{
+.caption8{
+  font-size: 4.3rem;
+  font-family: var(--font-NotoSansKRbold);
+  position: absolute;
+  top: 490px;
+  right: 457px;
+  color: #fff;
+}
+.caption9{
   font-size: 2.6rem;
-  font-weight: bold;
-  font-style: normal;
+  font-family: var(--font-NotoSansKRmeid);
   position: absolute;
-  top: 166px;
-  right: 297px;
+  top: 650px;
+  right: 350px;
   color: #fff;
-  padding: 10px;
-}
-
-.caption6{
-  font-size: 1.3rem;
-  font-weight: lighter;
-  font-style: normal;
-  position: absolute;
-  top: 260px;
-  right: 115px;
-  color: #fff;
-  padding: 10px;
-  line-height : 25px;
 }
 
 .bottom {
-  background-color: #363636;
-  width: 100%;
-  height: 120px;
-
+  margin-top: 100px;
+  width: 2400px;
+  border-top: 2px solid black;
+  height: 500px;
+  /*justify-content: center; /*자식 요소들이 가로의 중앙에 오도록
+  align-items: center; /*자식 요소들이 세로의 중앙에 오도록*/
+  margin-left: auto;
+  margin-right: auto;
+}
+.bottom h1{
   display: flex;
-  justify-content: center;
-  align-items: center;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 62px;
+  color: black;
+  margin-left: 1040px;
+  margin-top: 50px;
+  margin-bottom: 100px;
+
 }
 
-.info{
+.headline{
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 570;
+}
+
+.cont{
+  margin-left: auto;
+  margin-right: auto;
   font-size: 1.1rem;
   font-weight:200;
   font-style: normal;
-  color: white;
-  text-align: center;
+  color: black;
+  font-family: var(--font-NotoSansKRmeid);
 }
 
+.git-logo{
+  margin-top: 4px;
+  width: 40px;
+  height: 40px;
+}
+
+/* grid layout */
+.GRIDCONT{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  justify-items: center;
+}

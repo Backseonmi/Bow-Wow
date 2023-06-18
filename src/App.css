@@ -1,13 +1,36 @@
-body {
-  background-color: #FFFAF5;
+/* App.css */
+
+.logo {
+  margin-top: -6px;
+  margin-right: 10px;
 }
-.Bar {
-  display: flex;
-  list-style-type: none;
-  margin-left: 1200px;
-}
+
 .navbar {
-  margin: 20px;
-  text-decoration: none;
+  height: 100px;
+  border-bottom: 1px solid #c8c7c7;
+  font-family: var(--font-NotoSansKRbold);
+  background-color: #FEF7ED !important;
+}
+
+.navbar-brand{
+  margin-left: -500px;
+  font-size: 40px;
+}
+
+.navbar .nav-link {
+  font-size: 30px;
   color: lightslategray;
+  margin-right: 40px;
+}
+
+.navbar .nav-link:hover {
+  color: #333;
+}
+
+.navbar .nav-link.active {
+  color: #333; /* 원하는 글자 색상으로 변경하세요 */
+}
+
+.me-auto {
+  margin-right: -500px !important;
 }

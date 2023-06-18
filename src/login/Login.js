@@ -22,6 +22,7 @@ const auth = getAuth(app);
 
 const Login = () => {
   const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -32,8 +33,13 @@ const Login = () => {
       }
     });
 
+    const timeout = setTimeout(() => {
+      setLoading(false);
+    }, 2000); // 2초 후 로딩 상태 변경
+
     return () => {
       unsubscribe();
+      clearTimeout(timeout);
     };
   }, []);
 
@@ -118,12 +124,12 @@ const Login = () => {
       {profileImageUrl ? (
         <div className={styles.onerow}>
           <img src={profileImageUrl} className={styles.defaultImage} alt="프로필 사진" />
-          <input type="file" accept="image/*" onChange={handleImageUpload} />
+          <input className={styles.logimg} type="file" accept="image/*" onChange={handleImageUpload} />
         </div>
       ) : (
         <div className={styles.onerow}>
           <img src={defaultProfileImage} className={styles.defaultImage} alt="기본 프로필 사진" />
-          <input type="file" accept="image/*" onChange={handleImageUpload} />
+          <input className={styles.logimg} type="file" accept="image/*" onChange={handleImageUpload} />
         </div>
       )}
       </>
@@ -132,29 +138,33 @@ const Login = () => {
 
   return (
     <>
-      {user ? (
-        <>
-        <div className={styles.divCenter}>
-          <Profile />
-          <p>로그인된 사용자: {user.displayName}</p>
-        </div>
-        <div className={styles.buttons}>
-          <button className={styles.logout} onClick={handleGoogleLogin}>로그아웃</button>
-          <button className={styles.signout} onClick={handleDeleteAccount}>회원 탈퇴</button>
-        </div>
-        </>
+      {loading ? ( // 로딩 상태에 따라 로딩 텍스트 또는 로그인 컴포넌트를 렌더링
+        <div className={styles.loadingText}>사용자 정보를 가져오는 중입니다...</div> // 로딩 중일 때 보여줄 텍스트
       ) : (
-        <div className={styles.line}>
-          <div>
-            <h1 className={styles.title}>Login</h1>
+        user ? (
+          <>
+            <div className={styles.divCenter}>
+              <Profile />
+              <p className = {styles.nowlogin}>로그인된 사용자: {user.displayName}</p>
+            </div>
+            <div className={styles.buttons}>
+              <button className={styles.logout} onClick={handleGoogleLogin}>로그아웃</button>
+              <button className={styles.signout} onClick={handleDeleteAccount}>회원 탈퇴</button>
+            </div>
+          </>
+        ) : (
+          <div className={styles.line}>
+            <div>
+              <h1 className={styles.title}>Login</h1>
+            </div>
+            <div className={styles.parentDiv}>
+              <button className={styles.button} onClick={handleGoogleLogin}>
+                <img src={logo1} className={styles['Google-Logo']} alt="logo" />
+                Sign in with Google
+              </button>
+            </div>
           </div>
-          <div className={styles.parentDiv}>
-            <button className={styles.button} onClick={handleGoogleLogin}>
-              <img src={logo1} className={styles['Google-Logo']} alt="logo" />
-              Sign in with Google
-            </button>
-          </div>
-        </div>
+        )
       )}
     </>
   );

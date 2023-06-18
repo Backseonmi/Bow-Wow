@@ -9,39 +9,20 @@ import 'swiper/swiper.min.css';
 import logo1 from '../assets/banner1.png';
 import logo2 from '../assets/banner2.png';
 import logo3 from '../assets/banner3.png';
-import logo4 from '../assets/키워줘멍.png';
-import logo5 from '../assets/멍멍.png';
+import dog1 from '../assets/dog1.png';
+import dog2 from '../assets/dog2.png';
+import dog3 from '../assets/dog3.png';
+import git from '../assets/github.png';
 import styles from './Main.module.css';
 
 
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 
 function Main() {
-  const [showText, setShowText] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      const threshold = 300; // 스크롤 임계값 설정
-
-      if (scrollPosition > threshold) {
-        if (!showText) {
-          setShowText(true);
-        }
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [showText]);
-
   return (
     <>
-      <div>
-        <Swiper
+      <div className={styles.swiperWrapper}>
+        <Swiper className={styles.swiper}
           spaceBetween={50}
           slidesPerView={1}
           pagination={{ clickable: true }}
@@ -62,14 +43,11 @@ function Main() {
       </div>
 
       <div className={styles.title}>
-        <p className={showText ? styles.showText : ''}>
           Be My Family
-        </p>
       </div>
-
       
       <div className={styles.container}>
-        <img src={logo4} className={styles.first} />
+        <img src={dog1} className={styles.first} />
         <div className={styles.float}>
           <p className={styles.caption1}>새로운 가족을 맞아주세요!</p>
           <p className={styles.caption2}>키워줘 멍</p>
@@ -78,13 +56,11 @@ function Main() {
       </div>
 
       <div className={styles.title}>
-        <p className={showText ? styles.showText : ''}>
         Share With Me
-        </p>
       </div>
 
       <div className={styles.container}>
-        <img src={logo5} className={styles.second} />
+        <img src={dog2} className={styles.second} />
         <div className={styles.float}>
           <p className={styles.caption4}>대화를 나눠봐요!</p>
           <p className={styles.caption5}>멍멍</p>
@@ -92,15 +68,45 @@ function Main() {
         </div>
       </div>
 
-      <div className={styles.bottom}>
-        <div className = {styles.info}>
-          <p>백선미 w2102@e-mirim.hs.kr / 010-8082-7009</p>
-          <p>김비야 w2116@e-mirim.hs.kr / 010-8696-8430</p>
-        </div>
-        
+      <div className={styles.title}>
+        Share With Me
       </div>
+
+      <div className={styles.container}>
+        <img src={dog3} className={styles.third} />
+        <div className={styles.float}>
+          <p className={styles.caption7}>보호소를 찾아보세요!</p>
+          <p className={styles.caption8}>보러와멍</p>
+          <p className={styles.caption9}>근처의<br/>보호소를 알아보세요</p>
+        </div>
+      </div>
+
+      <div className={styles.bottom}>
+          <h1>Developers</h1>
+        <div className={styles.GRIDCONT}>
+          <p className={styles.headline}>Name</p>
+          <p className={styles.headline}>Phone</p>
+          <p className={styles.headline}>Email</p>
+          <p className={styles.headline}>Github</p>
+          <div className={styles.cont}>백선미</div>
+          <div className={styles.cont}>010-8082-7009</div>
+          <div className={styles.cont}>w2102@e-mirim.hs.kr</div>
+          <a href="https://github.com/Backseonmi">
+            <img src={git} className={styles['git-logo']} alt="logo" />
+          </a>
+          <div className={styles.cont}>김비야</div>
+          <div className={styles.cont}>010-8696-8430</div>
+          <div className={styles.cont}>w2116@e-mirim.hs.kr</div>
+          <a href="https://github.com/biyakim">
+            <img src={git} className={styles['git-logo']} alt="logo" />
+          </a>
+      </div>
+      </div>
+
+      
     </>
   );
 }
 
 export default Main;
+

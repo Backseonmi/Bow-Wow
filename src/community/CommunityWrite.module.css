@@ -1,4 +1,5 @@
 .titleContainer {
+    margin-top: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,10 +14,10 @@
 .titleInput {
     display: block;
     width: 100%;
-    max-width: 1000px;
+    max-width: 1800px;
     height: 50px;
     border-radius: 6px;
-    margin-top: 30px;
+    margin-top: 100px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
@@ -25,13 +26,18 @@
 
 .contentInput{
     display: block;
-    width: 100%;
-    max-width: 1000px;
-    height: 400px;
+    width: 1800px;
+    height: 500px;
     margin-left: auto;
     margin-right: auto;
     border: 1px solid #444444;
-    border-radius: 3px;
+    border-radius: 6px;
+}
+
+.limit{
+    margin-top: 50px;
+    margin-left: 2100px;
+
 }
 
 .comButton {
@@ -40,7 +46,7 @@
     width: 125px;
     height: 35px;
     color: white;
-    margin-left: 120px;
+    margin-left: 400px;
     margin-top: 100px;
     margin-bottom: 50px;
     font-size: 14px;
@@ -50,12 +56,11 @@
 .container {
     display: flex;
     justify-content: center;
-    align-items: center;
     gap: 20px; /* 사이를 넓히는 값 설정 */
   }
   
 
-input[type="file"]::file-selector-button {
+.munimg::file-selector-button {
     background-color: #8e8dcd;
     width: 125px;
     height: 35px;
@@ -67,59 +72,6 @@ input[type="file"]::file-selector-button {
     margin-bottom: 50px;
 }
 
-input[type="file"] {
-    width: 440px;
-}
-
-@media (max-width: 1920px) {
-    .titleInput {
-        width: 90%;
-    }
-
-    .qleditor {
-        width: 95%;
-    }
-}
-
-@media (max-width: 1200px) {
-    .titleInput {
-        width: 100%;
-    }
-
-    .qleditor {
-        width: 100%;
-    }
-}
-
-@media (max-width: 768px) {
-    .titleContainer {
-        flex-direction: column;
-    }
-
-    .titleInput {
-        width: 90%;
-        margin-top: 20px;
-        margin-bottom: 10px;
-    }
-
-    .qleditor {
-        width: 95%;
-    }
-
-    .comButton {
-        margin-top: 50px;
-        margin-bottom: 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    .titleInput {
-        width: 100%;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-
-    .qleditor {
-        width: 100%;
-    }
+.munimg[type="file"] {
+    width: 520px;
 }

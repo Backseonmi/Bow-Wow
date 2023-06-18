@@ -1,51 +1,50 @@
-body {
-    background-color :  #FFFAF5 ;
-}
-h2{
-    margin-left: 200px;
-    margin-top: 50px;
-}
-.first_abandoned{
-    padding-left: 300px;
-}
-img{
-    width: 300px;
-    height: 250px;
-    margin: 100px;
-}
-li{
-    list-style:none;
-    
-}   
-.animal_list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    margin-left: 200px;
-    margin-top: 100px;
-    padding: 0;
-  }
-  
-  .animal_list li {
-    display: inline-block;
-    margin-right: 20px;
-    width: 20%;
-    position: relative;
-  }
-p{
-    margin-left: 200px;
-    font-family :Arial, Helvetica, sans-serif;
-    
-}
-.pageNo {
-    margin-top: 100px;
-    margin-left: 890px;
-}
 .title {
     margin-top: 100px;
     text-align: center;
-    margin-right: 200px;
 }
-footer {
-    margin-top: 400px;
+h2{
+    font-size: 60px;
+    font-family: var(--font-NotoSansKRbold);
+}
+.no{
+    margin-top: 30px;
+    margin-left: -10px;
+    font-size: 30px;
+    font-family: var(--font-NotoSansKRmeid);
+}
+.animalname{
+    margin-left: auto;
+    margin-right: auto;
+}
+.doggimge{
+    width: 300px;
+    height: 250px;
+    margin: 100px;
+    border-radius: 6%;
+}
+.animallist {
+    list-style: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+  }
+  
+  .animallist li {
+    display: inline-block;
+    position: relative;
+  }
+.kind{
+    margin-left: 200px;
+    font-family :Arial, Helvetica, sans-serif;
+}
+.sex{
+    display: flex;
+    margin-left: 240px;
+    font-family :Arial, Helvetica, sans-serif;
+}
+.pageNo {
+    margin-top: 100px;
+    margin-left: 1200px;
+    font-size: 27px;
+    font-family: var(--font-NotoSansKRmeid);
 }

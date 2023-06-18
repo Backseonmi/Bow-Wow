@@ -57,7 +57,7 @@ const CommunityDetail = (props) => {
     try {
       await deleteDoc(doc(db, 'posts', post.id));
       alert('게시물이 성공적으로 삭제되었습니다.');
-      history.push('/bow'); // bow로 리디렉션
+      history.push('/community'); // bow로 리디렉션
     } catch (error) {
       console.log('게시물 삭제 중 오류가 발생했습니다.', error);
     }
@@ -79,7 +79,7 @@ const CommunityDetail = (props) => {
       </div>
 
       <div className={styles.content}>
-        <img src={post.url} />
+        {post.url && <img src={post.url} alt="Post Image" />}
         {stripTags(post.content)}
       </div>
 

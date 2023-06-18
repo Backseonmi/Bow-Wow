@@ -7,9 +7,11 @@ import { useHistory } from 'react-router-dom';
 
 const CommunityList = () => {
   const [posts, setPosts] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1);
   const [pageSize, setPageSize] = useState(10);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [searchQuery, setSearchQuery] = useState(''); // 검색어 상태 추가
   const currentUser = useCurrentUser();
+  console.log(currentUser);
 
   useEffect(() => {
     // Firebase Firestore에서 게시물 목록을 실시간으로 감지
@@ -26,13 +28,18 @@ const CommunityList = () => {
       });
       setPosts(sortedPosts);
     });
-  }, []);  
+  }, []);
 
   const history = useHistory();
 
   const handleRowClick = (postId) => {
+    localStorage.setItem('communityDetailScrollPostId', postId);
     history.push(`/community/detail/${postId}`);
   };
+
+  useEffect(() => {
+    localStorage.setItem('communityListCurrentPage', currentPage.toString());
+  }, [currentPage]);
 
   const totalPages = Math.ceil(posts.length / pageSize);
   const startIndex = (currentPage - 1) * pageSize;
@@ -43,10 +50,22 @@ const CommunityList = () => {
     setCurrentPage(page);
   };
 
+  const filteredPosts = currentPosts.filter((post) =>
+    post.title.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   return (
     <div>
       <h2 className={styles.h2}>COMMUNITY</h2>
       <p className={styles.p}>자유롭게 사람들과 꿀팁과 대화를 나누세요</p>
+
+      <input
+        type="text"
+        value={searchQuery}
+        onChange={(e) => setSearchQuery(e.target.value)}
+        placeholder="검색어를 입력하세요"
+        className={styles.search}
+      />
 
       <Link to="/community/write">
         <button className={styles.newPost}>새 게시물 작성</button>
@@ -62,7 +81,7 @@ const CommunityList = () => {
           </tr>
         </thead>
         <tbody>
-          {currentPosts.map((post, index) => (
+          {filteredPosts.map((post, index) => (
             <tr key={post.id} onClick={() => handleRowClick(post.id)}>
               <td>{startIndex + index + 1}</td> {/* 번호 수정 */}
               <td className={styles.title}>{post.title}</td>
