@@ -6,7 +6,6 @@ import Login from './login/Login';
 import CommunityList from './community/CommunityList';
 import CommunityWrite from './community/CommunityWrite';
 import CommunityDetail from './community/CommunityDetail';
-
 import logo from './assets/footprint.png';
 import Shelter from './Shelter/Shelter';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
