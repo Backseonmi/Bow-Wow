@@ -14,6 +14,7 @@ import dog2 from '../assets/dog2.png';
 import dog3 from '../assets/dog3.png';
 import git from '../assets/github.png';
 import styles from './Main.module.css';
+import wow from '../assets/wow.png';
 
 
 SwiperCore.use([Navigation, Pagination, Autoplay]);
