@@ -1,0 +1,24 @@
+.container {
+    background-color: #DAE5D0;
+    width: 1400px;
+    height: 200px;
+    margin-left: 50px;
+    margin-top: 50px;
+    border-radius: 10px;
+}
+
+.container h2,
+.container p {
+    margin: 0;
+    margin-left: 80px;
+    padding-top: 30px;
+
+}
+.container img {
+    position:absolute;
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    margin-left: 29px;
+    margin-top: 28px;
+}

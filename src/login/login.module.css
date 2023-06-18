@@ -1,31 +1,95 @@
-.email {
-    border: none;
-    background-color: #FFFAF5;
+.line{
+    display: block;
+    margin-top: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-width: 1px;
+    width: 400px;
+    height: 500px;
+    border-color: #000;
+    border-radius: 7px;
 
 }
-.password {
-    border: none;
-    background-color: #FFFAF5;
-    margin-top: 100px;
-}
-hr {
-    width: 500px;
-}
-.button {
-    border: none;
-    background-color: #FFFAF5;
-    color :brown;
-}
-.login {
-  margin-left: 750px;
-  margin-top: 200px;
-}
-p {
+.title{
+    margin-top: 170px;
+    margin-bottom: 40px;
     text-align: center;
-    margin-right: 200px;
 }
-h2 {
-    text-align: center;
-    margin-right: 200px;
-    margin-top: 100px;
+
+.parentDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button{
+    width: 180px;
+    height: 50px;
+    box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    border: none;
+    background-color: white;
+    color:dimgray;
+}
+
+.Google-Logo{
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+.onerow {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.defaultImage{
+    display: flex;
+    width: 100px;
+    height: 100px;
+    margin-right: 30px;
+}
+
+input[type="file"] {
+    display: flex;
+    color: dimgray;
+    width: 300px;
+}
+
+.divCenter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.logout{
+    border: none;
+    background-color: #080665;
+    width: 125px;
+    height: 35px;
+    color: white;
+    font-size: 14px;
+    border-radius: 6px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.signout{
+    border: none;
+    background-color: #080665;
+    width: 125px;
+    height: 35px;
+    color: white;
+    font-size: 14px;
+    border-radius: 6px;
+    cursor: pointer;
 }

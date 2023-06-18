@@ -1,0 +1,129 @@
+.titleContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.title {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.date-author {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 120px;
+}
+
+.date-author p {
+    margin-right: 20px;
+}
+
+.content {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-width: 1px;
+    width: 1200px;
+    height: 700px;
+    border-color: #000;
+    border-radius: 6px;
+}
+
+.deleteButton {
+    border: none;
+    background-color: #080665;
+    width: 125px;
+    height: 35px;
+    color: white;
+    margin-left: 100px;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    font-size: 14px;
+    border-radius: 6px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 20px;
+}
+
+.content img {
+  width: 600px;
+  height: 200px;
+  margin-top: 20px; /* 이미지 위 여백 조절 */
+  margin-bottom: 20px;
+}
+
+@media (max-width: 1920px) {
+    .content {
+        width: 100%;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .deleteButton {
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .content {
+        width: 100%;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .deleteButton {
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .titleContainer {
+        flex-direction: column;
+    }
+
+    .date-author {
+        justify-content: center;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .deleteButton {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .titleContainer {
+        flex-direction: column;
+    }
+
+    .date-author {
+        justify-content: center;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .content {
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .deleteButton {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
