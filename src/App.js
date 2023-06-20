@@ -12,16 +12,16 @@ import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import Location1 from './location/location1';
-import Location2 from './location/location2';
-import Location3 from './location/location3';
-import Location4 from './location/location4';
-import Location5 from './location/location5';
-import Location6 from './location/location6';
-import Location7 from './location/location7';
-import Location8 from './location/location8';
-import Location9 from './location/location9';
-import Location10 from './location/location10';
+import Location1 from './location/Location1'
+import Location2 from './location/Location2';
+import Location3 from './location/Location3';
+import Location4 from './location/Location4';
+import Location5 from './location/Location5';
+import Location6 from './location/Location6';
+import Location7 from './location/Location7';
+import Location8 from './location/Location8';
+import Location9 from './location/Location9';
+import Location10 from './location/Location10';
 
 function App() {
   const location = useLocation();
@@ -53,16 +53,16 @@ function App() {
       <Route path="/community/detail/:postId" component={CommunityDetail} />
       <Route exact path="/login" render={() => <Login />} />
 
-      <Route exact path="/location1" render={() => <Location1 />} />
-      <Route exact path="/location2" render={() => <Location2 />} />
-      <Route exact path="/location3" render={() => <Location3 />} />
-      <Route exact path="/location4" render={() => <Location4 />} />
-      <Route exact path="/location5" render={() => <Location5 />} />
-      <Route exact path="/location6" render={() => <Location6 />} />
-      <Route exact path="/location7" render={() => <Location7 />} />
-      <Route exact path="/location8" render={() => <Location8 />} />
-      <Route exact path="/location9" render={() => <Location9 />} />
-      <Route exact path="/location10" render={() => <Location10 />} />
+      <Route exact path="/Location1" render={() => <Location1 />} />
+      <Route exact path="/Location2" render={() => <Location2 />} />
+      <Route exact path="/Location3" render={() => <Location3 />} />
+      <Route exact path="/Location4" render={() => <Location4 />} />
+      <Route exact path="/Location5" render={() => <Location5 />} />
+      <Route exact path="/Location6" render={() => <Location6 />} />
+      <Route exact path="/Location7" render={() => <Location7 />} />
+      <Route exact path="/Location8" render={() => <Location8 />} />
+      <Route exact path="/Location9" render={() => <Location9 />} />
+      <Route exact path="/Location10" render={() => <Location10 />} />
     </>
   );
 }
