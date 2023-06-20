@@ -12,16 +12,16 @@ import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import Location1 from './location/Location1'
-import Location2 from './location/Location2';
-import Location3 from './location/Location3';
-import Location4 from './location/Location4';
-import Location5 from './location/Location5';
-import Location6 from './location/Location6';
-import Location7 from './location/Location7';
-import Location8 from './location/Location8';
-import Location9 from './location/Location9';
-import Location10 from './location/Location10';
+import Location1 from './location/loc12'
+import Location2 from './location/loc2';
+import Location3 from './location/loc3';
+import Location4 from './location/loc4';
+import Location5 from './location/loc5';
+import Location6 from './location/loc6';
+import Location7 from './location/loc7';
+import Location8 from './location/loc8';
+import Location9 from './location/loc9';
+import Location10 from './location/loc10';
 
 function App() {
   const location = useLocation();
