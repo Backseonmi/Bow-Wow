@@ -125,7 +125,7 @@ const CommunityWrite = () => {
         <button onClick={handleSubmit} className={styles.comButton}>
           글쓰기
         </button>
-        <input className={styles.munimg} type="file" ref={fileInputRef} accept="image/png" />
+        <input className={styles.munimg} type="file" ref={fileInputRef} accept=".gif, .jpg, .png"/>
       </div>
     </>
   );
