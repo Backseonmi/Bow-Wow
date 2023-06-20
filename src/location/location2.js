@@ -34,7 +34,7 @@ const Location2 = () => {
         <div className={styles.Cont}>
           <div className={styles.container}>
             <img src={here} alt="Location Icon" />
-            <p>서울특별시 마포구 만리재로 74(신공덕도으 신공덕2차삼성래미안) 삼성래미안상가 117호</p>
+            <p>서울특별시 마포구 만리재로 74(신공덕2차삼성래미안) 삼성래미안상가 117호</p>
           </div>
 
           <div className={styles.container}>
