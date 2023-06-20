@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import here from '../assets/pin.png';
 import phone from '../assets/phone-call.png';
 import styles from './location.module.css';
-
+ 
 const { kakao } = window;
 
 const Location1 = () => {
