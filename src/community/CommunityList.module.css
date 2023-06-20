@@ -45,6 +45,7 @@ table {
     border-top: 2px solid #444444;
     border-collapse: collapse;
     text-align: center;
+    table-layout: fixed;
 }
 thead{
     height: 120px;
@@ -60,6 +61,7 @@ tbody{
 th, td {
     border-bottom: 1px solid #444444;
     padding: 10px;
+    table-layout: fixed;
 }
 
 td{
