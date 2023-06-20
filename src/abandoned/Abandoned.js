@@ -40,7 +40,7 @@ const Abandoned = (props) => {
             <>
               <div className={styles.title}>
                 <h2>유기견 입양</h2>
-                <p className={styles.no}>이쁘다고 입양하지 마세요 신중하게 생각하시고 입양하세요</p>
+                <p className={styles.no}>이쁘다고 입양하지 마세요. 신중하게 생각하시고 입양하세요.</p>
               </div>
 
             <ul className={styles.animallist}>
