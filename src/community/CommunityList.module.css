@@ -12,7 +12,7 @@
     font-family: var(--font-NotoSansKRmeid);
 }
 
-.search{
+.search {
     width: 500px;
     height: 50px;
     color: black;
@@ -20,7 +20,10 @@
     margin-top: 50px;
     margin-bottom: 20px;
     font-size: 30px;
-    border-radius: 6px;
+    border-width: 2px;
+    border-color: #080665;
+    border-style: solid;
+    border-radius: 12px;
     text-align: center;
 }
 
