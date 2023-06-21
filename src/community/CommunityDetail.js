@@ -43,7 +43,7 @@ const handleImageUpload = async (file) => {
     image.src = imageUrl;
 
     const canvas = document.createElement('canvas');
-    const maxWidth = 800; // 원하는 최대 가로 크기
+    const maxWidth = 900; // 원하는 최대 가로 크기
     const maxHeight = 600; // 원하는 최대 세로 크기
 
     let width = image.width;

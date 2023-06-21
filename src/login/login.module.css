@@ -94,14 +94,14 @@
 }
 
 .nowlogin{
-    margin-top: 210px;
+    margin-top: 180px;
     font-size: 40px;
     font-family: var(--font-NotoSansKRExmeid);
     font-weight: 557;
 }
 
 .buttons{
-    margin-top: 430px;
+    margin-top: 300px;
     display: flex;
     justify-content: center;
 }
